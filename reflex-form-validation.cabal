@@ -1,0 +1,39 @@
+Name: reflex-form-validation
+Version: 0.1
+Synopsis: Reflex tutorial
+Description: Simple form validations to demonstrate Reflex
+License: AllRightsReserved
+License-file: LICENSE
+Author: Sid Raval
+Maintainer: sid@thoughtbot.com
+Stability: Experimental
+Category: FRP
+Build-type: Simple
+Cabal-version: >=1.8
+
+library
+  hs-source-dirs: src
+  build-depends:
+    base,
+    reflex,
+    ghcjs-dom == 0.2.*,
+    reflex-dom,
+    containers,
+    file-embed,
+    text,
+    mtl
+  exposed-modules:
+    Reflex.FormValidation
+  other-extensions: TemplateHaskell
+  ghc-prof-options: -fprof-auto
+  ghc-options:  -Wall -fwarn-tabs -funbox-strict-fields -O2
+
+executable reflex-form-validation
+  hs-source-dirs: src-bin
+  main-is: main.hs
+  build-depends:
+    base,
+    reflex-form-validation
+  other-extensions: TemplateHaskell
+  ghc-prof-options: -fprof-auto
+  ghc-options: -threaded -Wall -fwarn-tabs -funbox-strict-fields -O2
