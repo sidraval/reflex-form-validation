@@ -21,7 +21,9 @@ library
     containers,
     file-embed,
     text,
-    mtl
+    mtl,
+    pureMD5,
+    bytestring
   exposed-modules:
     Reflex.FormValidation
   other-extensions: TemplateHaskell
